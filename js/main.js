@@ -13,3 +13,4 @@ addEventListener('scroll',()=>{const y=scrollY+140;links.forEach((a,i)=>a.classL
 const g=$('#gal'),lb=$('#lb');
 if(g){G.forEach(([f,c])=>{const i=new Image();i.src=`/assets/images/${f}.jpg`;i.alt=c;i.loading='lazy';i.onclick=()=>{lb.firstElementChild.src=i.src;lb.firstElementChild.alt=c;lb.classList.add('on')};g.append(i)});
 lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'))}
+const tb=$("#top");if(tb){addEventListener("scroll",()=>tb.classList.toggle("on",scrollY>700),{passive:true});tb.onclick=()=>scrollTo({top:0,behavior:'smooth'})}
